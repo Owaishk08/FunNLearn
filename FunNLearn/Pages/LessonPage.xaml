@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FunNLearn.Pages.LessonPage"
+             Title="LessonPage">
+    <StackLayout Padding="10" BackgroundColor="BurlyWood">
+        <Label Text="Select a Level" FontSize="30" HorizontalOptions="Center" Margin="0,20,0,20"/>
+        <ListView x:Name="LevelListView" ItemTapped="OnLevelSelected" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding LevelDescription}"
+                              Detail="{Binding LevelDifficulty}"
+                              Command="{Binding Source={x:Reference LessonPage},Path=BindingContext.OnLevelSelectedCommand}"
+                              CommandParameter="{Binding}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

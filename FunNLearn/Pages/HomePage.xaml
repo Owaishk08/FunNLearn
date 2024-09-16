@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FunNLearn.Pages.HomePage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Padding="15" BackgroundColor="BurlyWood">
+        <Image Source="logo.jpeg" MaximumHeightRequest="300" />
+
+        <Button x:Name="startlesson"
+                Text="Start"
+                FontSize="20"
+                Margin="0,50,0,20"
+                Background="Green"
+                HorizontalOptions="FillAndExpand"
+                Clicked="startlesson_Clicked"/>
+
+        <Button x:Name="achievements"
+                Text="Achievements"
+                FontSize="20"
+                Margin="0,20"
+                Background="Orange"
+                HorizontalOptions="FillAndExpand"
+                Clicked="achievements_Clicked"/>
+        
+        <Button x:Name="setting"
+                Text="Setting"
+                FontSize="20"
+                Margin="0,20"
+                Background="Gray"
+                HorizontalOptions="FillAndExpand"
+                Clicked="setting_Clicked"/>
+        
+        <Button x:Name="viewprofile"
+                Text="View Profile"
+                FontSize="18"
+                Margin="0,20"
+                HorizontalOptions="FillAndExpand"
+                Clicked="viewprofile_Clicked"/>
+        
+    </StackLayout>
+</ContentPage>
